@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiLX Project Full Base Apk And Api — Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <main class="auth-shell">
+    <section class="auth-card glass">
+      <div class="brand brand-large"><span class="brand-mark">CILX</span><div><b>CiLX Project</b><small>Base Apk Private</small></div></div>
+      <div class="auth-copy">
+        <span class="eyebrow">PRIVATE BASE APK PLATFORM</span>
+        <h1>Selamat datang kembali.</h1>
+        <p>Masuk menggunakan akun Google untuk mengakses dashboard dan koleksi file Anda.</p>
+      </div>
+
+      <div id="googleButton" class="google-wrap"></div>
+      <button class="btn btn-google fallback-google" id="demoLogin">
+        <span class="google-icon">G</span> Masuk dengan Google
+      </button>
+      <div class="security-row">
+        <span>🔒</span><span>Secure session</span><i></i><span>CiLX Project Encryption-Ready UI</span>
+      </div>
+      <div class="auth-footer">© 2026 CiLX Project</div>
+    </section>
+  </main>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="app.js"></script>
+  <script>
+    window.addEventListener('load', () => initGoogleLogin());
+    document.getElementById('demoLogin').addEventListener('click', () => {
+      const email = prompt('masukkan email Google:');
+      if (email && email.includes('@')) loginWithEmail(email, email.split('@')[0]);
+    });
+  </script>
+</body>
+</html>
