@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiLX Project Full Base Apk And Api — Admin Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <header class="topbar"><button class="icon-btn mobile-only" id="menuBtn">☰</button><div class="crumb">Workspace / Admin Console</div><div class="top-actions"><button class="icon-btn" id="themeBtn">☼</button><div class="user-pill" id="userPill"></div></div></header>
+    <section class="page">
+      <div class="page-title"><div><span class="eyebrow">ADMINISTRATOR</span><h1>File Control Center</h1><p>Upload file baru dan kelola metadata koleksi.</p></div></div>
+
+      <div class="admin-grid">
+        <section class="upload-panel glass">
+          <div class="panel-head"><div><span class="eyebrow">UPLOAD</span><h2>Tambah file</h2></div><span class="status-dot">READY</span></div>
+          <label class="dropzone" id="dropzone"><input type="file" id="fileInput" multiple><span class="upload-icon">↑</span><strong>Drag & drop file di sini</strong><small>atau klik untuk memilih file dari perangkat</small><em>Maksimal mengikuti storage browser</em></label>
+          <div id="uploadQueue"></div>
+          <button class="btn btn-primary full" id="uploadBtn">Upload ke Library</button>
+        </section>
+
+        <section class="admin-list-panel glass">
+          <div class="panel-head"><div><span class="eyebrow">MANAGEMENT</span><h2>Kelola file</h2></div><span id="adminCount">0 files</span></div>
+          <div id="adminList"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="editModal">
+  <div class="modal-card glass">
+    <div class="modal-head"><h2>Edit file</h2><button class="icon-btn" id="closeModal">×</button></div>
+    <input type="hidden" id="editId">
+    <label>Nama file<input id="editName"></label>
+    <label>Deskripsi<textarea id="editDescription" rows="4"></textarea></label>
+    <div class="modal-actions"><button class="btn" id="cancelEdit">Batal</button><button class="btn btn-primary" id="saveEdit">Simpan perubahan</button></div>
+  </div>
+</div>
+<div id="toast"></div>
+<script src="app.js"></script><script>bootPage('admin');</script>
+</body>
+</html>
