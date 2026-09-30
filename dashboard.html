@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiLX Project Full Base Apk And Api — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <header class="topbar"><button class="icon-btn mobile-only" id="menuBtn">☰</button><div class="crumb">Workspace / Dashboard</div><div class="top-actions"><button class="icon-btn" id="themeBtn" title="Theme">☼</button><div class="user-pill" id="userPill"></div></div></header>
+    <section class="page">
+      <div class="welcome hero-panel">
+        <div><span class="eyebrow">OVERVIEW</span><h1 id="welcomeTitle">Welcome.</h1><p>Kelola file Anda dengan cepat, rapi, dan nyaman.</p></div>
+        <a href="download.html" class="btn btn-primary">Buka File Library →</a>
+      </div>
+
+      <div class="stat-grid">
+        <article class="stat-card glass"><span>Total File</span><strong id="statFiles">0</strong><small>tersimpan di browser</small></article>
+        <article class="stat-card glass"><span>Total Ukuran</span><strong id="statSize">0 B</strong><small>kapasitas lokal</small></article>
+        <article class="stat-card glass"><span>Role</span><strong id="statRole">USER</strong><small>akses akun aktif</small></article>
+        <article class="stat-card glass"><span>Status</span><strong class="online">ONLINE</strong><small>session aktif</small></article>
+      </div>
+
+      <div class="section-head"><div><span class="eyebrow">QUICK ACCESS</span><h2>Akses cepat</h2></div></div>
+      <div class="quick-grid">
+        <a href="download.html" class="feature-card glass"><span class="feature-icon">↓</span><div><h3>Download Center</h3><p>Cari, lihat detail, dan download file.</p></div><b>→</b></a>
+        <a href="admin.html" class="feature-card glass admin-only"><span class="feature-icon">⚙</span><div><h3>Admin Console</h3><p>Upload, edit metadata, dan hapus file.</p></div><b>→</b></a>
+      </div>
+
+      <div class="section-head"><div><span class="eyebrow">RECENT</span><h2>File terbaru</h2></div><a href="download.html" class="text-link">Lihat semua</a></div>
+      <div id="recentFiles" class="file-table glass"></div>
+    </section>
+  </main>
+</div>
+<div id="toast"></div>
+<script src="app.js"></script><script>bootPage('dashboard');</script>
+</body>
+</html>
