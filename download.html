@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiLX Project Full Base Apk And Api — Download</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="download">
+<div class="app">
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main">
+    <header class="topbar"><button class="icon-btn mobile-only" id="menuBtn">☰</button><div class="crumb">Workspace / Download Center</div><div class="top-actions"><button class="icon-btn" id="themeBtn">☼</button><div class="user-pill" id="userPill"></div></div></header>
+    <section class="page">
+      <div class="page-title"><div><span class="eyebrow">FILE LIBRARY</span><h1>Download Center</h1><p>Semua file yang tersedia untuk akun Anda.</p></div></div>
+      <div class="toolbar glass"><div class="search"><span>⌕</span><input id="searchInput" placeholder="Cari nama file..."></div><select id="sortSelect"><option value="new">Terbaru</option><option value="name">Nama A–Z</option><option value="size">Ukuran</option></select></div>
+      <div id="downloadList" class="download-grid"></div>
+    </section>
+  </main>
+</div>
+<div id="toast"></div>
+<script src="app.js"></script><script>bootPage('download');</script>
+</body>
+</html>
